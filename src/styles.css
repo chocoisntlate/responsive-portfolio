@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    font-family: "mulish";
+}
+
+@font-face {
+    font-family: "mulish";
+    src: url(../assets/Mulish-Regular.ttf) format("truetype");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.img-container span {
+    font-size: 4em;
+}
+
+.title {
+    font-size: 5em;
+
+}
+
+.about-me-container {
+    display: flex;
+}
+
+.contact-me-container {
+    background-color: aquamarine;
+}
+
+.about-me-accent {
+    width: 110%;
+    height: 100vh;
+    background-color: aquamarine;
+
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-10deg) translateY(-30em);
+}
