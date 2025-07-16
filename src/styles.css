@@ -13,7 +13,7 @@ body {
     flex-direction: column;
 }
 
-img {
+.img {
     width: 180px;
     height: 280px;
     object-fit: cover;
@@ -37,7 +37,7 @@ img {
 }
 
 .title {
-    font-size: 5em;
+    font-size: 3.5em;
 
 }
 
@@ -65,6 +65,7 @@ img {
 }
 
 .about-me-accent {
+    box-shadow: 2px 9px 20px -10px rgba(0,0,0,0.54);
     width: 110%;
     height: 100vh;
     background-color: aquamarine;
@@ -72,4 +73,31 @@ img {
     position: absolute;
     z-index: -1;
     transform: rotate(-10deg) translateY(-30em);
+}
+
+.icon {
+    width: 25px;
+}
+
+.project-picture {
+    width: 100%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template: repeat(3, 350px) / repeat(3, 300px);
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-bar {
+    display: flex;
+    padding: 10px;
+}
+
+.project-name {
+    margin-right: auto;
 }
