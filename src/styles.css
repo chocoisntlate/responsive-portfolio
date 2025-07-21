@@ -51,6 +51,7 @@ body > * {
 
 .title {
     font-size: 2.5em;
+    margin-bottom: 20px;
 
 }
 
@@ -58,6 +59,17 @@ body > * {
 .about-me-background > .about-me-text {
     margin-bottom: 0;
 
+}
+
+.about-me-background {
+    will-change: transform;
+    transition: transform 300ms;
+}
+
+
+.about-me-background:hover {
+    transform: scale(1.05);
+    transition: transform 300ms;
 }
 
 .about-me-text {
@@ -126,7 +138,8 @@ body .contact-me-container {
     position: absolute;
     z-index: -1;
     transform: skewY(-5deg);
-    top: -100px;
+    
+    animation: accent-drop 1.5s both;
 
 }
 
@@ -166,6 +179,7 @@ body .contact-me-container {
     margin-bottom: 5em;
 }
 
+
 .project-grid {
     display: grid;
     grid-template: repeat(1, 270px) / repeat(3, 300px);
@@ -177,6 +191,14 @@ body .contact-me-container {
     display: flex;
     flex-direction: column;
     box-shadow: 2px 9px 20px -10px rgba(0,0,0,0.54);
+
+    will-change: transform;
+    transition: transform 200ms;
+}
+
+.item-container:hover {
+    transition: transform 200ms;
+    transform: scale(1.05);
 }
 
 
@@ -195,6 +217,27 @@ body .contact-me-container {
 
 .contact-me-img {
     width: 400px;
+}
+
+.icon {
+    will-change: transform;
+    transition: transform 300ms;
+
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    transition: transform 300ms;
+}
+
+@keyframes accent-drop {
+    0% {
+        top: -600px;
+    }
+
+    100% {
+        top: -100px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -251,4 +294,6 @@ body .contact-me-container {
     .icon-set, .icon-set-v2 {
         justify-content: center;
     }
+
+
 }
