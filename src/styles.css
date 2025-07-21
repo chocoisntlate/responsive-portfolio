@@ -9,13 +9,14 @@
 }
 
 body {
+    width: 100vw;
     display: flex;
     flex-direction: column;
 }
 
 body > * {
-    margin-left: 10em;
-    margin-right: 10em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img {
@@ -39,6 +40,8 @@ body > * {
 
 .img-container {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .title {
@@ -49,6 +52,7 @@ body > * {
 
 .about-me-background > .about-me-text {
     margin-bottom: 0;
+
 }
 
 .about-me-text {
@@ -81,6 +85,7 @@ body > * {
     background-color: white;
     padding: 20px;
     max-width: 50%;
+    min-width: 540px;
 
     display: flex;
 }
@@ -91,10 +96,8 @@ body > * {
 
 .contact-me-container {
     background-color: rgb(62, 141, 114);
-    padding: 3.5em;
-    padding-left: 10em;
-    padding-right: 10em;
     color: white;
+    padding: 2em;
 
     display: flex;
     justify-content: space-between;
@@ -111,13 +114,13 @@ body .contact-me-container {
 
 .about-me-accent {
     box-shadow: 2px 9px 20px -10px rgba(0,0,0,0.54);
-    width: 110%;
-    height: 100vh;
+    width: 100%;
+    height: 700px;
     background-color: rgb(62, 141, 114);
 
     position: absolute;
     z-index: -1;
-    transform: rotate(-10deg) translateY(-30em) translateX(-10em);
+    transform: rotate(-10deg) translateY(-30em) translateX(-4em) scaleX(300%);
 }
 
 .icon {
@@ -158,9 +161,9 @@ body .contact-me-container {
 
 .project-grid {
     display: grid;
-    grid-template: repeat(1, 300px) / repeat(3, 1fr);
+    grid-template: repeat(1, 270px) / repeat(3, 300px);
     grid-auto-rows: 300px;
-    gap: 50px;
+    gap: 20px;
 }
 
 .item-container {
@@ -183,10 +186,61 @@ body .contact-me-container {
     margin-right: auto;
 }
 
-
-
-
-
 .contact-me-img {
     width: 400px;
+}
+
+@media screen and (max-width: 1000px) {
+    .project-grid {
+        grid-template: repeat(1, 270px) / repeat(2, 300px);
+        grid-auto-rows: 300px;
+        gap: 20px;
+    }
+
+    .contact-me-img {
+        width: 300px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width:   670px) {
+    .project-grid {
+        grid-template: repeat(1, 300px) / repeat(1, 1fr);
+        grid-auto-rows: 300px;
+        gap: 20px;
+    }
+
+    .project-container {
+        padding: 15px;
+    }
+
+    .about-me-background {
+        flex-direction: column;
+        min-width: 360px;
+        background-color: transparent;
+    }
+
+    .img-container > span {
+        left: 37px;
+        font-size: 1.7em;
+    }
+
+    .img-container .img {
+        transform: scale(1.4);
+    }
+
+    .contact-me-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-me-container *, .about-me-text {
+        text-align: center;
+        
+    }
+
+    .icon-set, .icon-set-v2 {
+        justify-content: center;
+    }
 }
