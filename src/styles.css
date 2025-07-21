@@ -8,10 +8,15 @@
     src: url(../assets/Mulish-Regular.ttf) format("truetype");
 }
 
-body {
+html, body {
     width: 100vw;
+    max-width: 100vw;
+}
+
+body {
     display: flex;
     flex-direction: column;
+    
 }
 
 body > * {
@@ -115,12 +120,14 @@ body .contact-me-container {
 .about-me-accent {
     box-shadow: 2px 9px 20px -10px rgba(0,0,0,0.54);
     width: 100%;
-    height: 700px;
+    height: 400px;
     background-color: rgb(62, 141, 114);
 
     position: absolute;
     z-index: -1;
-    transform: rotate(-10deg) translateY(-30em) translateX(-4em) scaleX(300%);
+    transform: skewY(-5deg);
+    top: -100px;
+
 }
 
 .icon {
@@ -216,7 +223,8 @@ body .contact-me-container {
 
     .about-me-background {
         flex-direction: column;
-        min-width: 360px;
+        min-width: 0px;
+        max-width: 360px;
         background-color: transparent;
     }
 
